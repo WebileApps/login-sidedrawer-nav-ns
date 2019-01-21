@@ -22,7 +22,7 @@ const routes: Routes = [
 ];
 ```
 
-We need a `default` as the initial path for navigation to work correctly in iOS.
+We need `default` (or something similar) as an initial path for navigation to work correctly in iOS.
 
 ```typescript
 export class ItemsRootComponent implements OnInit {
@@ -49,7 +49,7 @@ We will have to manually navigate inside the named PRO in on init for the first 
 <!-- app.component.html -->
 <page-router-outlet actionBarVisibility="never"></page-router-outlet>
 ```
-* Although not explored here, we can lazily load components inside the named PRO. It requires you to use `NSEmptyOutletComponent` like a example [here](https://www.nativescript.org/blog/implementing-a-login-for-nativescript-apps-with-tab-based-navigation) which demonstrates tab drawer navigation after login.
+* Although not explored here, we can lazily load components inside the named PRO. It requires you to use `NSEmptyOutletComponent` like this [example](https://www.nativescript.org/blog/implementing-a-login-for-nativescript-apps-with-tab-based-navigation) which demonstrates tab drawer navigation after login.
 ```typescript
 import { NSEmptyOutletComponent } from "nativescript-angular/router";
 
